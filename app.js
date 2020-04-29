@@ -114,7 +114,7 @@ let verifySession = (req, res, next) => {
  * GET /lists
  * Purpose: Get all lists
  */
-app.get('/lists',authenticate, (req, res) => {
+app.get('/lists',(req, res) => {
     // We want to return an array of all the lists that belong to the authenticated user 
     List.find({
         _userId: req.user_id
